@@ -13,8 +13,8 @@ namespace ProjetoPI
 
         public static void Conectar()
         {
-            conexao.ConnectionString = "Integrated Security=true;Initial Catalog=CSharp;Data Source=stanis-pc\\SQLEXPRESS";
-            conexao.Open()
+            conexao.ConnectionString = "Integrated Security=true;Initial Catalog=PoliciaMilitar;Data Source=stanis-pc\\SQLEXPRESS";
+            conexao.Open();
         }
 
         public static void Desconectar()

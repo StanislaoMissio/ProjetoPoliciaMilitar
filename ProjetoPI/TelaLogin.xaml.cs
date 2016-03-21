@@ -27,7 +27,13 @@ namespace ProjetoPI
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            
+            Login login = new Login(txtUsername.Text, txtSenha.Password);
+        }
+
+        private void btnCadastro_Click(object sender, RoutedEventArgs e)
+        {
+            Cadastrar cadastro = new Cadastrar(txtUsername.Text, txtSenha.Password);
+            cadastro.CadastrarFuncionario();
         }
     }
 }

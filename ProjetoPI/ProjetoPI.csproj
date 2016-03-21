@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Cadastrar.cs" />
     <Compile Include="Conexao.cs" />
     <Page Include="TelaLogin.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +73,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CSharpDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Encriptografar.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="TelaLogin.xaml.cs">
       <DependentUpon>TelaLogin.xaml</DependentUpon>

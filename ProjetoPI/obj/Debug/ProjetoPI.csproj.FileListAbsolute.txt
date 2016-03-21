@@ -15,3 +15,17 @@ c:\users\stanis\documents\visual studio 2015\Projects\ProjetoPI\ProjetoPI\obj\De
 c:\users\stanis\documents\visual studio 2015\Projects\ProjetoPI\ProjetoPI\obj\Debug\Relatorio.g.cs
 c:\users\stanis\documents\visual studio 2015\Projects\ProjetoPI\ProjetoPI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 c:\users\stanis\documents\visual studio 2015\Projects\ProjetoPI\ProjetoPI\obj\Debug\Relatorio.baml
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\ProjetoPI.exe.config
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.exe
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.pdb
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.csprojResolveAssemblyReference.cache
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\TelaLogin.g.cs
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\App.g.cs
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI_MarkupCompile.cache
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI_MarkupCompile.lref
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\ProjetoPI.exe
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\ProjetoPI.pdb
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\TelaLogin.baml
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.g.resources
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.Properties.Resources.resources
+C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.csproj.GenerateResource.Cache
