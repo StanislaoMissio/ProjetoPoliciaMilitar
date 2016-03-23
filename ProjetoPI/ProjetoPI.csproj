@@ -57,6 +57,10 @@
     </ApplicationDefinition>
     <Compile Include="Cadastrar.cs" />
     <Compile Include="Conexao.cs" />
+    <Page Include="TelaInicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TelaLogin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -65,16 +69,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CSharpDataSet.cs">
-      <DependentUpon>CSharpDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="CSharpDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CSharpDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Encriptografar.cs" />
     <Compile Include="Login.cs" />
+    <Compile Include="TelaInicial.xaml.cs">
+      <DependentUpon>TelaInicial.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TelaLogin.xaml.cs">
       <DependentUpon>TelaLogin.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -98,17 +97,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="CSharpDataSet.xsc">
-      <DependentUpon>CSharpDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CSharpDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CSharpDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CSharpDataSet.xss">
-      <DependentUpon>CSharpDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

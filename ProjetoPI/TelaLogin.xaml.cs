@@ -20,6 +20,8 @@ namespace ProjetoPI
     /// </summary>
     public partial class TelaLogin : Window
     {
+        private TelaInicial telaInicial;
+
         public TelaLogin()
         {
             InitializeComponent();
@@ -27,13 +29,21 @@ namespace ProjetoPI
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Login login = new Login(txtUsername.Text, txtSenha.Password);
-        }
-
-        private void btnCadastro_Click(object sender, RoutedEventArgs e)
-        {
-            Cadastrar cadastro = new Cadastrar(txtUsername.Text, txtSenha.Password);
-            cadastro.CadastrarFuncionario();
+            Login login = new Login();
+            login.Logar(txtUsername.Text, txtSenha.Password);
+            if (Login.LogarAdministrador())
+            {
+                telaInicial = new TelaInicial(true);
+                this.Close();
+                telaInicial.Show();
+            }
+            else
+            {
+                telaInicial = new TelaInicial(false);
+                this.Close();
+                telaInicial.Show();
+            }
+            
         }
     }
 }

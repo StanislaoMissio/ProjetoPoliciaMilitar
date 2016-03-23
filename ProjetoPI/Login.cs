@@ -10,24 +10,64 @@ namespace ProjetoPI
 {
     class Login
     {
-        private string estado = null;
+        private static string estado = null;
+        private static int permissao = 0;
 
-        public Login(string usuario, string senha)
+        public static string Estado
+        {
+            get
+            {
+                return estado;
+            }
+
+            set
+            {
+                estado = value;
+            }
+        }
+
+        public static int Permissao
+        {
+            get
+            {
+                return permissao;
+            }
+
+            set
+            {
+                permissao = value;
+            }
+        }
+
+        public void Logar(string usuario, string senha)
         {
             try
             {
-            Conexao.Conectar();
-            string qry = "select count(Id_Func), estado from usuario where username = '"+ usuario + "' and senha = '" + Encriptografar.Encripto(senha) +"' group by estado";
-            SqlCommand comando = new SqlCommand(qry, Conexao.conexao);
-            SqlDataReader reader = comando.ExecuteReader();
+                Conexao.Conectar();
+                string qry = "select permissao, estado from usuario where username = '"+ usuario + "' and senha = '" + Encriptografar.Encripto(senha) +"'";
+                SqlCommand comando = new SqlCommand(qry, Conexao.conexao);
+                SqlDataReader reader = comando.ExecuteReader();
                 if (reader.Read())
                 {
-                    
+                    permissao = reader.GetInt32(0);
+                    estado = reader.GetString(1);
                 }
             }
-            catch(Exception e)
+            catch(SqlException e)
             {
                 Console.WriteLine(e.Message);
+            }
+        }
+
+        public static bool LogarAdministrador()
+        {
+            if (estado.Equals("A") && permissao == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

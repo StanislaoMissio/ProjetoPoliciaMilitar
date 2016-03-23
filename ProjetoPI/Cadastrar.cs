@@ -22,7 +22,7 @@ namespace ProjetoPI
         public void CadastrarFuncionario()
         {
             Conexao.Conectar();
-            string qry = "insert into Usuario(username, senha) values('"+ this.username +"','"+ Encriptografar.Encripto(this.senha) + "')";
+            string qry = "insert into Usuario(username, senha, permissao) values('"+ this.username +"','"+ Encriptografar.Encripto(this.senha) + "','1')";
             SqlCommand comando = new SqlCommand(qry, Conexao.conexao);
             comando.ExecuteNonQuery();
             Conexao.Desconectar();
