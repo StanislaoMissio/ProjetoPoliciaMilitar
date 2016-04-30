@@ -3,121 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         xmlns:local="clr-namespace:ProjetoPI"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="Tela Inicial" WindowState="Maximized" Closing="Window_Closing">
+        Title="Boletim de Ocorrência" Width="500" Height="400">
     <Grid>
-        <TabControl x:Name="tabTelaInicial" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <TabControl.Resources>
-                <Style TargetType="TabItem">
-                    <Setter Property="FontSize" Value="17"/>
-                </Style>
-                <Style TargetType="Label">
-                    <Setter Property="FontSize" Value="20"/>
-                    <Setter Property="FontFamily" Value="Verdana"/>
-                    <Setter Property="VerticalAlignment" Value="Top"/>
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                </Style>
-                <Style TargetType="TextBox">
-                    <Setter Property="FontSize" Value="20"/>
-                    <Setter Property="FontFamily" Value="Verdana"/>
-                </Style>
-            </TabControl.Resources>
-            <TabItem Header="Cadastrar Boletim de Ocorrência">
-                <ScrollViewer VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="216*"/>
-                            <ColumnDefinition Width="429*"/>
-                            <ColumnDefinition Width="45*"/>
-                            <ColumnDefinition Width="44*"/>
-                        </Grid.ColumnDefinitions>
-                        <Label x:Name="lblNome" Content="Nome Completo" Height="34" />
-                        <Label x:Name="lblRG" Content="RG" Margin="0,30,0,0" Height="34"/>
-                        <Label x:Name="lblUF_RG" Content="UF" Grid.Column="2" Margin="0,30,0,0" Height="34"/>
-                        <Label x:Name="lblPai" Content="Nome do Pai" Margin="0,60,0,0" Height="34"/>
-                        <Label x:Name="lblMae" Content="Nome da Mãe" Margin="0,90,0,0" Height="34"/>
-                        <Label x:Name="lblNacionalidade" Content="Nacionalidade" Margin="0,120,0,0" Height="34"/>
-                        <Label x:Name="lblEmail" Content="E-Mail" Margin="0,150,0,0" Height="34"/>
-                        <Label x:Name="lblNaturalidade" Content="Naturalidade" Margin="0,180,0,0" Height="34"/>
-                        <Label x:Name="lblSexo" Content="Sexo" Margin="0,210,0,0" Height="34"/>
-                        <Label x:Name="lblDataNascimento" Content="Data de Nascimento" Margin="0,240,0,0" Height="34"/>
-                        <Label x:Name="lblCutis" Content="Cútis" Margin="0,270,0,0" Height="34"/>
-                        <Label x:Name="lblEstadoCivil" Content="Estado Civil" Margin="0,300,0,0" Height="34"/>
-                        <Label x:Name="lblProfissao" Content="Profissão" Margin="0,330,0,0" Height="34"/>
-                        <Label x:Name="lblEndereco" Content="Endereço" Margin="0,360,0,0" Height="34"/>
-                        <Label x:Name="lblBairro" Content="Bairro" Margin="0,390,0,0" Height="34"/>
-                        <Label x:Name="lblMunicipio" Content="Municipio" Margin="0,420,0,0" Height="34"/>
-                        <Label x:Name="lblUF_Municipio" Content="UF" Grid.Column="2" Margin="0,420,0,0" Height="34"/>
-                        <Label x:Name="lblComplemento" Content="Complemento" Margin="0,450,0,0" Height="34"/>
-                        <Label x:Name="lblCEP" Content="CEP" Margin="0,480,0,0" Height="34"/>
-                        <Label x:Name="lblTelefone" Content="Telefone" Margin="0,510,0,0" Height="34"/>
-                        <TextBox x:Name="txtNomeCompleto" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="30" />
-                        <wpfTool:MaskedTextBox x:Name="txtRG" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,30,0,0" Height="30" Mask="00.000.000-0"/>
-                        <TextBox x:Name="txtNomePai" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,60,0,0" Height="30" />
-                        <TextBox x:Name="txtNomeMae" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,90,0,0" Height="30"/>
-                        <TextBox x:Name="txtNacionalidade" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,120,0,0" Height="30"/>
-                        <TextBox x:Name="txtEmail" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,150,0,0" Height="30"/>
-                        <TextBox x:Name="txtNaturalidade" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,180,0,0" Height="30"/>
-                        <ComboBox x:Name="cmbSexo" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,210,0,0" Height="30">
-                            <ComboBoxItem Content="Masculino" x:Name="Masculino" Selected="Masculino_Selected"/>
-                            <ComboBoxItem Content="Feminino" x:Name="Feminino" Selected="Feminino_Selected"/>
-                        </ComboBox>
-                        <wpfTool:MaskedTextBox x:Name="txtDataNascimento" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,240,0,0" Height="30" Mask="00/00/0000"/>
-                        <TextBox x:Name="txtCutis" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,270,0,0" Height="30"/>
-                        <ComboBox x:Name="cmbEstadoCivil" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,300,0,0" Height="30">
-                            <ComboBoxItem Content="Solteito" x:Name="Solteiro" Selected="Solteiro_Selected"/>
-                            <ComboBoxItem Content="Casado" x:Name="Casado" Selected="Casado_Selected"/>
-                            <ComboBoxItem Content="Separado" x:Name="Separado" Selected="Separado_Selected"/>
-                            <ComboBoxItem Content="Viuvo" x:Name="Viuvo" Selected="Viuvo_Selected"/>
-                            <ComboBoxItem Content="Divorciado" x:Name="Divorciado" Selected="Divorciado_Selected"/>
-                        </ComboBox>
-                        <TextBox x:Name="txtProfissao" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,330,0,0" Height="30"/>
-                        <TextBox x:Name="txtEndereco" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,360,0,0" Height="30" />
-                        <TextBox x:Name="txtBairro" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,390,0,0" Height="30" />
-                        <TextBox x:Name="txtMunicipio" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,420,0,0" Height="30"/>
-                        <TextBox x:Name="txtRG_UF" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,30,0,0" Height="30" />
-                        <TextBox x:Name="txtMunicipio_UF" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,420,0,0" Height="30"/>
-                        <TextBox x:Name="txtComplemento" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,450,0,0" Height="30"/>
-                        <TextBox x:Name="txtCEP" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,480,0,0" Height="30"/>
-                        <TextBox x:Name="txtTelefone" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,510,0,0" Height="30"/>
-                        <Button x:Name="CadastrarBoletim" Content="Cadastrar" Margin="0,540,0,0" HorizontalAlignment="Center" Grid.Column="0" Click="CadastrarBoletim_Click"/>
-                    </Grid>
-                </ScrollViewer>
-            </TabItem>
-            <TabItem Header="Consultar Boletim" x:Name="tabConsultarBoletim">
-                <Grid Background="#FFE5E5E5" x:Name="gridConsultarBoletim"/>
-            </TabItem>
-            <TabItem Header="Gerar Relatório" x:Name="tabGerarRelatorio">
-                <Grid Background="#FFE5E5E5" x:Name="gridGerarRelatorio"/>
-            </TabItem>
-            <TabItem Header="Cadastrar Usuário" x:Name="tabCadastrarUsuario" Visibility="Visible" IsEnabled="True">
-                <Grid Background="#FFE5E5E5" x:Name="gridCadastrarUsuario" ShowGridLines="False">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="151*"/>
-                        <ColumnDefinition Width="431*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="35"/>
-                        <RowDefinition Height="35"/>
-                        <RowDefinition Height="35"/>
-                        <RowDefinition Height="35"/>
-                    </Grid.RowDefinitions>
-                    <Label x:Name="lblRE" Content="RE: " HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0"/>
-                    <Label x:Name="lblSenha" Content="Senha: " HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" />
-                    <Label x:Name="lblPermissao" Content="Permissao: " HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="2"/>
-                    <wpfTool:MaskedTextBox x:Name="txtRE" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" FontSize="25" FontFamily="Verdana" Margin="0,0,400,0" MaxLength="8" Mask="000000-0" Focusable="True"/>
-                    <PasswordBox x:Name="pswSenha" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1" FontSize="25" FontFamily="Verdana" Margin="0,0,200,0"/>
-                    <ComboBox x:Name="cmbPermissao" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="2" FontSize="25" FontFamily="Verdana" Margin="0,0,350,0">
-                        <ComboBoxItem Content="Administrador" x:Name="Administrador" ListBoxItem.Selected="Administrador_Selected" Focusable="True"/>
-                        <ComboBoxItem Content="Usuario" x:Name="Usuario" ListBoxItem.Selected="Usuario_Selected"/>
-                        <ComboBoxItem Content="Usuario Chefe" x:Name="Chefe" ListBoxItem.Selected="Chefe_Selected" />
-                    </ComboBox>
-                    <Button Content="Cadastrar" x:Name="btnCadastrar" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.Column="1" Click="btnCadastrar_Click"/>
-                    <Label x:Name="lbl" Content=""  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="25" Margin="0,323,0,-323" Grid.ColumnSpan="2" Grid.Row="3" />
-                </Grid>
-            </TabItem>
-        </TabControl>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblRM" Content="RM" FontSize="20" Height="40" Width="41" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <Label x:Name="lblSenha" Content="Senha" FontSize="20" Height="40" Width="68" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,29,0,0"/>
+        <wpfTool:MaskedTextBox x:Name="txtRM" FontSize="20" Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1"/>
+        <PasswordBox x:Name="txtSenha" FontSize="20" Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Margin="0,40,0,0"/>
+        <Button Content="Login" Height="40" Width="60" Margin="319,273,113,56" FontSize="20" RenderTransformOrigin="0.55,0.5"/>
     </Grid>
 </Window>

@@ -108,6 +108,14 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Cadastrar.cs" />
     <Compile Include="Classes\Conexao.cs" />
+    <Page Include="Telas\TelaCadastroFuncionario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TelaCadastroOcorrencia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\TelaInicial.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -122,6 +130,12 @@
     </Compile>
     <Compile Include="Classes\Encriptografar.cs" />
     <Compile Include="Classes\Login.cs" />
+    <Compile Include="Telas\TelaCadastroFuncionario.xaml.cs">
+      <DependentUpon>TelaCadastroFuncionario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TelaCadastroOcorrencia.xaml.cs">
+      <DependentUpon>TelaCadastroOcorrencia.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
     </Compile>

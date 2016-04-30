@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="Login" Height="240" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" PreviewKeyDown="Window_PreviewKeyDown">
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="203" VerticalAlignment="Top" Width="212" Cursor="No" Source="C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\Resource\PoliciaMilitarLogo.jpg" Opacity="0.4"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="203" VerticalAlignment="Top" Width="212" Cursor="No" Source="C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\Resource\PoliciaMilitarLogo.jpg" Opacity="0.4"/>
         <Label x:Name="lblRE" Content="RE" HorizontalAlignment="Left" Margin="171,153,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label x:Name="lblSenha" Content="Senha" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="146,174,0,0" FontSize="16"/>
         <wpfTool:MaskedTextBox x:Name="txtRE" HorizontalAlignment="Left" Height="23"  VerticalAlignment="Top" Width="55" Margin="227,153,0,0" Mask="000000-0" />

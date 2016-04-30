@@ -16,13 +16,14 @@ namespace ProjetoPI
             try
             {
                 Conexao.Conectar();
-                string qryVerifica = "SELECT COUNT(ID_FUNC) FROM USUARIO WHERE RE = '@re'";
+                string qryVerifica = "SELECT COUNT(ID_FUNC) FROM USUARIO WHERE RE = @re";
                 SqlCommand comando = new SqlCommand(qryVerifica, Conexao.conexao);
                 comando.Parameters.Add("@re", System.Data.SqlDbType.VarChar).Value = re;
                 SqlDataReader reader = comando.ExecuteReader();
                 if (reader.Read() == true)
                 {
-                    string qry = "INSERT INTO Usuario(RE, senha, permissao) values('@re','@senha','@permissao')";
+                    reader.Close();
+                    string qry = "INSERT INTO Usuario(RE, senha, permissao) values(@re, @senha, @permissao)";
                     SqlCommand cmd = new SqlCommand(qry, Conexao.conexao);
                     cmd.Parameters.Add("@re", System.Data.SqlDbType.VarChar).Value = re;
                     cmd.Parameters.Add("@senha", System.Data.SqlDbType.VarChar).Value = Encriptografar.Encripto(senha);

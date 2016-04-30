@@ -13,7 +13,7 @@ namespace ProjetoPI
 
         public static void Conectar()
         {
-            conexao.ConnectionString = "Data Source=STANIS-PC\\SQLEXPRESS;Initial Catalog=PoliciaMilitar;Integrated Security=True";
+            conexao.ConnectionString = "Data Source=Jarvas\\SQLEXPRESS;Initial Catalog=PoliciaMilitar;Integrated Security=True";
             conexao.Open();
         }
 

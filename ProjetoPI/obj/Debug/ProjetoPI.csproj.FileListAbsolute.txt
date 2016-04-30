@@ -50,3 +50,42 @@ C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMi
 C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaLogin.g.cs
 C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaInicial.baml
 C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaLogin.baml
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\ProjetoPI.exe.config
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.exe
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.pdb
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\ProjetoPI.exe
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\ProjetoPI.pdb
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\System.Windows.Controls.Layout.Toolkit.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\WPFToolkit.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\Xceed.Wpf.DataGrid.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.csprojResolveAssemblyReference.cache
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaInicial.g.cs
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaLogin.g.cs
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\App.g.cs
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI_MarkupCompile.cache
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI_MarkupCompile.lref
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaInicial.baml
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaLogin.baml
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.g.resources
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.Properties.Resources.resources
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\ProjetoPI.csproj.GenerateResource.Cache
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaCadastroOcorrencia.g.cs
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaCadastroFuncionario.g.cs
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaCadastroFuncionario.baml
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\Telas\TelaCadastroOcorrencia.baml

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\obj\Debug\
 ProjetoPI
 none
 false
 DEBUG;TRACE
-C:\Users\Stanis\Documents\Visual Studio 2015\Projects\ProjetoPI\ProjetoPoliciaMilitar\ProjetoPI\App.xaml
-2638721873
+C:\Users\Stan\Source\Repos\ProjetoPoliciaMilitar\ProjetoPI\App.xaml
+4-2040070249
 
-14711529765
-22-545472018
-Telas\TelaInicial.xaml;Telas\TelaLogin.xaml;
+16-2045548841
+221599387802
+Telas\TelaCadastroFuncionario.xaml;Telas\TelaCadastroOcorrencia.xaml;Telas\TelaInicial.xaml;Telas\TelaLogin.xaml;
 
 False
 
