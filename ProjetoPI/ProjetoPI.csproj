@@ -108,11 +108,19 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Cadastrar.cs" />
     <Compile Include="Classes\Conexao.cs" />
+    <Page Include="Telas\TelaBoletim.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Telas\TelaCadastroFuncionario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Telas\TelaCadastroOcorrencia.xaml">
+    <Page Include="Telas\TelaCadastroPessoa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telas\TelaCadastroVeiculo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,11 +138,17 @@
     </Compile>
     <Compile Include="Classes\Encriptografar.cs" />
     <Compile Include="Classes\Login.cs" />
+    <Compile Include="Telas\TelaBoletim.xaml.cs">
+      <DependentUpon>TelaBoletim.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Telas\TelaCadastroFuncionario.xaml.cs">
       <DependentUpon>TelaCadastroFuncionario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Telas\TelaCadastroOcorrencia.xaml.cs">
-      <DependentUpon>TelaCadastroOcorrencia.xaml</DependentUpon>
+    <Compile Include="Telas\TelaCadastroPessoa.xaml.cs">
+      <DependentUpon>TelaCadastroPessoa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TelaCadastroVeiculo.xaml.cs">
+      <DependentUpon>TelaCadastroVeiculo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaInicial.xaml.cs">
       <DependentUpon>TelaInicial.xaml</DependentUpon>
@@ -188,6 +202,15 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Ocorrencia.png" />
+    <Resource Include="Resource\Relatorio.png" />
+    <Resource Include="Resource\Pesquisa.png" />
+    <Resource Include="Resource\Funcionario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resource\Carro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -21,6 +21,8 @@ namespace ProjetoPI.Telas
     {
         private string sexo = null;
         private string estadoCivil = null;
+        private string cutis = null;
+        public static string pessoa = null;
 
         public TelaCadastroOcorrencia()
         {
@@ -59,10 +61,22 @@ namespace ProjetoPI.Telas
         {
             estadoCivil = "Divorciado";
         }
+        private void Branco_Selected(object sender, RoutedEventArgs e)
+        {
+            cutis = "Branco";
+        }
+        private void Negro_Selected(object sender, RoutedEventArgs e)
+        {
+            cutis = "Negro";
+        }
+        private void Pardo_Selected(object sender, RoutedEventArgs e)
+        {
+            cutis = "Pardo";
+        }
 
         private void CadastrarBoletim_Click(object sender, RoutedEventArgs e)
         {
-            DateTime dataNascimento = DateTime.ParseExact(txtDataNascimento.Text, "dd/mm/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+
             List<string> dados = new List<string>();
             dados.Add(txtRG.Text);
             dados.Add(txtNomeCompleto.Text);
@@ -81,7 +95,11 @@ namespace ProjetoPI.Telas
             dados.Add(txtComplemento.Text);
             dados.Add(txtCEP.Text);
             dados.Add(txtTelefone.Text);
-            Cadastrar.CadastrarBoletim(dados, dataNascimento);
+            dados.Add(txtRG_UF.Text);
+            dados.Add(txtMunicipio_UF.Text);
+            Cadastrar.CadastrarPessoa(dados, txtDataNascimento.Text);
+            pessoa = txtRG.Text;
         }
+
     }
 }

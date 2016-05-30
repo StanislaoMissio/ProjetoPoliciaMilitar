@@ -23,5 +23,25 @@ namespace ProjetoPI
         {
             InitializeComponent();
         }
+        // Cadastrar Funcionario
+        private void btnTelaCadastrarFunc_Click(object sender, RoutedEventArgs e)
+        {
+            Telas.TelaCadastroFuncionario telaCadastrarFunc = new Telas.TelaCadastroFuncionario();
+            telaCadastrarFunc.Show();
+            this.Hide();
+        }
+        // Cadastrar Ocorrêmcia
+        private void btnCadastrarOcorrencia_Click(object sender, RoutedEventArgs e)
+        {
+            Telas.TelaCadastroOcorrencia telaCadastrarOcorrencia = new Telas.TelaCadastroOcorrencia();
+            telaCadastrarOcorrencia.Show();
+            this.Hide();
+        }
+        // Gerar Relatório
+        private void btnGerarRelatorio_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
     }
 }

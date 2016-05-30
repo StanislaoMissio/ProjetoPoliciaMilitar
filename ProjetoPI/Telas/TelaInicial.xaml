@@ -6,16 +6,47 @@
         xmlns:local="clr-namespace:ProjetoPI"
         xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="Boletim de Ocorrência" Width="500" Height="400">
+        Title="Tela Inicial" Width="500" Height="300" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="44*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="lblRM" Content="RM" FontSize="20" Height="40" Width="41" VerticalAlignment="Top" HorizontalAlignment="Right"/>
-        <Label x:Name="lblSenha" Content="Senha" FontSize="20" Height="40" Width="68" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,29,0,0"/>
-        <wpfTool:MaskedTextBox x:Name="txtRM" FontSize="20" Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1"/>
-        <PasswordBox x:Name="txtSenha" FontSize="20" Height="40" Width="40" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Column="1" Margin="0,40,0,0"/>
-        <Button Content="Login" Height="40" Width="60" Margin="319,273,113,56" FontSize="20" RenderTransformOrigin="0.55,0.5"/>
+        <TextBox x:Name="txtPesquisa" Text="Pesquisar... " Height="20" HorizontalAlignment="Stretch" VerticalAlignment="Top" BorderBrush="Transparent"/>
+        <Button x:Name="btnPesquisar" HorizontalAlignment="Right" VerticalAlignment="Top" Height="20" Background="Transparent" BorderBrush="Transparent" Width="20">
+            <Image Source="/ProjetoPI;component/Resource/Pesquisa.png"/>
+        </Button>
+        <Button x:Name="btnTelaCadastrarFunc" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Height="35" Background="Transparent" BorderBrush="Transparent" Click="btnTelaCadastrarFunc_Click">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="28*"/>
+                    <ColumnDefinition Width="187*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="/ProjetoPI;component/Resource/Funcionario.png" Grid.Column="0" HorizontalAlignment="Left"/>
+                <Label Content="Cadastrar Funcionário" Grid.Column="1" HorizontalAlignment="Right"/>
+            </Grid>
+        </Button>
+        <Button x:Name="btnCadastrarOcorrencia" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Height="35" Margin="0,70,0,0" Background="Transparent" BorderBrush="Transparent" Click="btnCadastrarOcorrencia_Click" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="28*"/>
+                    <ColumnDefinition Width="187*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="/ProjetoPI;component/Resource/Ocorrencia.png" Grid.Column="0"/>
+                <Label Content="Cadastrar Ocorrência" Grid.Column="1"/>
+            </Grid>
+        </Button>
+        <Button x:Name="btnGerarRelatorio" HorizontalAlignment="Stretch" VerticalAlignment="Top" Grid.Column="1" Height="35" Margin="0,140,0,0" Background="Transparent" BorderBrush="Transparent" Click="btnGerarRelatorio_Click" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="28*"/>
+                    <ColumnDefinition Width="187*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="/ProjetoPI;component/Resource/Relatorio.png" Grid.Column="0"/>
+                <Label Content="Gerar Relatório" Grid.Column="1"/>
+            </Grid>
+        </Button>
+        <ListView x:Name="listBox" HorizontalAlignment="Left" Height="234" Margin="10,25,0,0" VerticalAlignment="Top" Width="296">
+        </ListView>
     </Grid>
 </Window>

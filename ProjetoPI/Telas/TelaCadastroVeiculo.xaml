@@ -1,0 +1,103 @@
+﻿<Window x:Class="ProjetoPI.Telas.TelaCadastroVeiculo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns:local="clr-namespace:ProjetoPI.Telas"
+        mc:Ignorable="d"
+        Title="Veiculo envolvido" Height="1100" Width="1100">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="365*"/>
+            <ColumnDefinition Width="627*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="HorizontalAlignment" Value="Right"/>
+                <Setter Property="Grid.Column" Value="0"/>
+                <Setter Property="Height" Value="30"/>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="Grid.Column" Value="1"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="300"/>
+            </Style>
+            <Style TargetType="wpfTool:MaskedTextBox">
+                <Setter Property="FontSize" Value="17"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="Grid.Column" Value="1"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Width" Value="300"/>
+            </Style>
+            <Style TargetType="RadioButton">
+                <Setter Property="FontSize" Value="17"/>
+            </Style>
+        </Grid.Resources>
+        <Label Content="Boletim" Margin="0,0,0,0"/>
+        <Label Content="Código Renavam" Margin="0,30,0,0"/>
+        <Label Content="Placa" Margin="0,60,0,0"/>
+        <Label Content="Municipio" Margin="0,90,0,0"/>
+        <Label Content="UF" Margin="0,90,327,0" Grid.Column="1"/>
+        <Label Content="Chassis" Margin="0,150,0,0"/>
+        <Label Content="Marca" Margin="0,180,0,0"/>
+        <Label Content="Modelo" Margin="0,210,0,0"/>
+        <Label Content="Ano de fabricação" Margin="0,240,0,0"/>
+        <Label Content="Categoria" Margin="0,270,0,0"/>
+        <Label Content="Cor Predominante" Margin="0,300,0,0"/>
+        <Label Content="Categoria CNH" Margin="0,330,0,0"/>
+        <Label Content="NR CNH" Margin="0,360,0,0"/>
+        <Label Content="Vencimento CNH" Margin="0,390,0,0"/>
+        <Label Content="Tipo do acidente" Margin="0,420,0,0"/>
+        <Label Content="Condição da pista" Margin="0,450,0,0"/>
+        <Label Content="Tipo da pista" Margin="0,480,0,0"/>
+        <Label Content="Semaforo" Margin="0,510,0,0"/>
+        <Label Content="Danos" Margin="0,540,0,0"/>
+        <TextBox x:Name="txtBoletim" Margin="0,0,0,0" IsEnabled="False"/>
+        <wpfTool:MaskedTextBox x:Name="txtCodigoRenavam" Margin="0,30,0,0" Mask=""/>
+        <wpfTool:MaskedTextBox x:Name="txtPlaca" Margin="0,60,0,0" Mask=""/>
+        <TextBox x:Name="txtMunicipio" Margin="0,90,0,0"/>
+        <wpfTool:MaskedTextBox x:Name="txtUF_Municipio" Width="20" Margin="363,90,0,0" Mask="AA"/>
+        <TextBox x:Name="txtChassis" Margin="0,150,0,0"/>
+        <TextBox x:Name="txtMarca" Margin="0,180,0,0"/>
+        <TextBox x:Name="txtModelo" Margin="0,210,0,0"/>
+        <wpfTool:MaskedTextBox x:Name="txtAnoFabricacao" Margin="0,240,0,0"/>
+        <TextBox x:Name="txtCategoria" Margin="0,270,0,0"/>
+        <TextBox x:Name="txtCor_Predominante" Margin="0,300,0,0"/>
+        <TextBox x:Name="txtCategoria_CNH" Margin="0,330,0,0"/>
+        <TextBox x:Name="txtNR_CNH" Margin="0,360,0,0"/>
+        <TextBox x:Name="txtVencimento_CNH" Margin="0,390,0,0"/>
+        <TextBox x:Name="txtTipo_Acidente" Margin="0,420,0,0"/>
+        <TextBox x:Name="txtCondicao_Pista" Margin="0,450,0,0"/>
+        <TextBox x:Name="txtTipo_Pista" Margin="0,480,0,0"/>
+        <TextBox x:Name="txtSemaforo" Margin="0,510,0,0"/>
+        <TextBox x:Name="txtDanos" Margin="0,540,0,0"/>
+        <Image Source="/ProjetoPI;component/Resource/Carro.png" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="251,0,239,169" Grid.Column="1" Width="200" Height="300">
+        </Image>
+        <RadioButton x:Name="Lanterna_Direita" Content="Lanterna Direita" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="456,613,0,0" />
+        <RadioButton x:Name="Lanterna_Esquerda" Content="Lanterna Esquerda" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="82,613,0,0"/>
+        <RadioButton x:Name="Parachoque" Content="Parachoque" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="286,573,0,0"/>
+        <RadioButton x:Name="Espelho_Retrovisor_Esquerdo" Content="Espelho Retrovisor Esquerdo" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,667,0,0" Grid.Column="1"/>
+        <RadioButton x:Name="Espelho_Retrovisor_Direito" Content="Espelho Retrovisor Direito" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="467,667,0,0"/>
+        <RadioButton x:Name="Porta_Esquerda" Content="Porta Esquerda" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="112,720,0,0"/>
+        <RadioButton x:Name="Porta_Direita" Content="Porta Direita" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="450,720,0,0"/>
+        <RadioButton x:Name="Porta_Traseira_Esquerda" Content="Porta Traseira Esquerda" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="52,800,0,0"/>
+        <RadioButton x:Name="Porta_Traseira_Direita" Content="Porta Traseira Direita" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="444,800,0,0"/>
+        <Rectangle Grid.Column="1" Width="60" Height="25" Margin="313,743,317,301">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="White"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <RadioButton x:Name="Topo" Content="Topo" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="317,743,0,0"/>
+        <RadioButton x:Name="Lanterna_Traseira_Esquerda" Content="Lanterna Traseira Esquerda" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="26,873,0,0" Grid.Column="1"/>
+        <RadioButton x:Name="Lanterna_Traseira_Direita" Content="Lanterna Traseira Direita" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="444,873,0,0"/>
+        <RadioButton x:Name="Parachoque_Traseiro" Content="Parachoque Traseiro" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="251,905,0,0"/>
+        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="50" Height="30" Width="75" Grid.Column="1" Click="btnCadastrar_Click"/>
+    </Grid>
+</Window>

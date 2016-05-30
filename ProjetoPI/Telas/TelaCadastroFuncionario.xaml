@@ -6,20 +6,61 @@
         xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         xmlns:local="clr-namespace:ProjetoPI.Telas"
         mc:Ignorable="d"
-        Title="TelaCadastroFuncionario" Width="300" Height="250">
+        Title="Funcionário" Width="300" Height="250" >
     <Grid>
-        <Grid Background="#FFE5E5E5" x:Name="gridCadastrarUsuario" ShowGridLines="False">
+        <Grid x:Name="gridCadastrarUsuario">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="151*"/>
                 <ColumnDefinition Width="431*" />
             </Grid.ColumnDefinitions>
-            <Label x:Name="lblRE" Content="RE: " HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,0,0,0"/>
-            <Label x:Name="lblSenha" Content="Senha: " HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,30,0,0"/>
-            <Label x:Name="lblPermissao" Content="Permissao: " HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,60,0,0"/>
-            <wpfTool:MaskedTextBox x:Name="txtRE" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="20" Height="30" Margin="0,0,0,0" MaxLength="8" Mask="000000-0" Focusable="True"/>
-            <PasswordBox x:Name="pswSenha" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="25" Width="200"  Height="30" Margin="0,30,0,0"/>
-            <ComboBox x:Name="cmbPermissao" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" FontSize="25" Width="200" Height="30" Margin="0,60,0,0">
-                <ComboBoxItem Content="Administrador" x:Name="Administrador" ListBoxItem.Selected="Administrador_Selected" Focusable="True"/>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="Height" Value="30" />
+                    <Setter Property="Grid.Column" Value="0"/>
+                </Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="Height" Value="30" />
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Width" Value="100"/>
+                </Style>
+                <Style TargetType="wpfTool:MaskedTextBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="Height" Value="30" />
+                    <Setter Property="Grid.Column" Value="1"/>
+                </Style>
+                <Style TargetType="ComboBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="Height" Value="30" />
+                    <Setter Property="Grid.Column" Value="1"/>
+                </Style>
+                <Style TargetType="PasswordBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="Height" Value="30" />
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Width" Value="100"/>
+                </Style>
+            </Grid.Resources>
+            <Label Content="Nome" Margin="0,0,0,0"/>
+            <Label Content="RE: " Margin="0,30,0,0"/>
+            <Label Content="Senha: " Margin="0,60,0,0"/>
+            <Label Content="Permissao: " Margin="0,90,0,0"/>
+            <TextBox x:Name="txtNome" Margin="0,0,0,0"/>
+            <wpfTool:MaskedTextBox x:Name="txtRE" Margin="0,30,0,0" Mask="000000-0"/>
+            <PasswordBox x:Name="pswSenha" Margin="0,60,0,0"/>
+            <ComboBox x:Name="cmbPermissao" Margin="0,90,0,0">
+                <ComboBoxItem Content="Administrador" x:Name="Administrador" ListBoxItem.Selected="Administrador_Selected" />
                 <ComboBoxItem Content="Usuario" x:Name="Usuario" ListBoxItem.Selected="Usuario_Selected"/>
                 <ComboBoxItem Content="Usuario Chefe" x:Name="Chefe" ListBoxItem.Selected="Chefe_Selected" />
             </ComboBox>
