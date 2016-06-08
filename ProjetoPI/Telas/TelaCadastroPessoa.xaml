@@ -7,96 +7,98 @@
         xmlns:local="clr-namespace:ProjetoPI.Telas"
         mc:Ignorable="d"
         Title=""  Width="600" Height="650">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="219*"/>
-            <ColumnDefinition Width="524*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.Resources>
-            <Style TargetType="TextBox">
-                <Setter Property="FontSize" Value="17"/>
-                <Setter Property="VerticalAlignment" Value="Top"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Grid.Column" Value="1"/>
-                <Setter Property="Height" Value="30"/>
-                <Setter Property="Width" Value="300"/>
-            </Style>
-            <Style TargetType="ComboBox">
-                <Setter Property="FontSize" Value="17"/>
-                <Setter Property="VerticalAlignment" Value="Top"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Grid.Column" Value="1"/>
-                <Setter Property="Height" Value="30"/>
-                <Setter Property="Width" Value="300"/>
-            </Style>
-            <Style TargetType="Label">
-                <Setter Property="FontSize" Value="17"/>
-                <Setter Property="VerticalAlignment" Value="Top"/>
-                <Setter Property="HorizontalAlignment" Value="Right"/>
-                <Setter Property="Grid.Column" Value="0"/>
-                <Setter Property="Height" Value="30"/>
-            </Style>
-            <Style TargetType="wpfTool:MaskedTextBox">
-                <Setter Property="FontSize" Value="17"/>
-                <Setter Property="VerticalAlignment" Value="Top"/>
-                <Setter Property="HorizontalAlignment" Value="Left"/>
-                <Setter Property="Grid.Column" Value="1"/>
-                <Setter Property="Height" Value="30"/>
-            </Style>
-        </Grid.Resources>
-        <Label Content="Nome Completo"/>
-        <Label x:Name="lblRG" Content="RG" Margin="0,30,0,0"/>
-        <Label x:Name="lblUF_RG" Content="UF" Grid.Column="1" Margin="0,30,153,0" />
-        <Label x:Name="lblPai" Content="Nome do Pai" Margin="0,60,0,0" />
-        <Label x:Name="lblMae" Content="Nome da Mãe" Margin="0,90,0,0" />
-        <Label x:Name="lblNacionalidade" Content="Nacionalidade" Margin="0,120,0,0"/>
-        <Label x:Name="lblEmail" Content="E-Mail" Margin="0,150,0,0" />
-        <Label x:Name="lblNaturalidade" Content="Naturalidade" Margin="0,180,0,0" />
-        <Label x:Name="lblSexo" Content="Sexo" Margin="0,210,0,0" />
-        <Label x:Name="lblDataNascimento" Content="Data de Nascimento" Margin="0,240,0,0" />
-        <Label x:Name="lblCutis" Content="Cútis" Margin="0,270,0,0" />
-        <Label x:Name="lblEstadoCivil" Content="Estado Civil" Margin="0,300,0,0" />
-        <Label x:Name="lblProfissao" Content="Profissão" Margin="0,330,0,0" />
-        <Label x:Name="lblCEP" Content="CEP" Margin="0,360,0,0" />
-        <Label x:Name="lblEndereco" Content="Endereço" Margin="0,390,0,0" />
-        <Label x:Name="lblBairro" Content="Bairro" Margin="0,420,0,0" />
-        <Label x:Name="lblMunicipio" Content="Municipio" Margin="0,450,0,0" />
-        <Label x:Name="lblUF_Municipio" Content="UF" Grid.Column="1" Margin="0,450,153,0"/>
-        <Label x:Name="lblComplemento" Content="Complemento" Margin="0,480,0,0" />
-        <Label x:Name="lblTelefone" Content="Telefone" Margin="0,510,0,0" />
-        <TextBox x:Name="txtNomeCompleto" Margin="0"/>
-        <wpfTool:MaskedTextBox x:Name="txtRG" Mask="00.000.000-0" Margin="0,30,0,0"/>
-        <wpfTool:MaskedTextBox x:Name="txtRG_UF" Mask="AA" Margin="270,30,0,0" />
-        <TextBox x:Name="txtNomePai" Margin="0,60,0,0" />
-        <TextBox x:Name="txtNomeMae" Margin="0,90,0,0" />
-        <TextBox x:Name="txtNacionalidade"  Margin="0,120,0,0" />
-        <TextBox x:Name="txtEmail" Margin="0,150,0,0" />
-        <TextBox x:Name="txtNaturalidade" Margin="0,180,0,0" />
-        <ComboBox x:Name="cmbSexo" Margin="0,210,0,0" >
-            <ComboBoxItem Content="Masculino" x:Name="Masculino" Selected="Masculino_Selected"/>
-            <ComboBoxItem Content="Feminino" x:Name="Feminino" Selected="Feminino_Selected"/>
-        </ComboBox>
-        <wpfTool:MaskedTextBox x:Name="txtDataNascimento" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,240,0,0" Height="30" Mask="00/00/0000" FontSize="20"/>
-        <ComboBox x:Name="txtCutis" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,270,0,0" Height="30" Width="200">
-            <ComboBoxItem Content="Branco" x:Name="Branco" Selected="Branco_Selected"/>
-            <ComboBoxItem Content="Negro" x:Name="Negro" Selected="Negro_Selected" />
-            <ComboBoxItem Content="Pardo" x:Name="Pardo" Selected="Pardo_Selected" />
-        </ComboBox>
-        <ComboBox x:Name="cmbEstadoCivil" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,300,0,0" Width="200" Height="30">
-            <ComboBoxItem Content="Solteiro" x:Name="Solteiro" Selected="Solteiro_Selected"/>
-            <ComboBoxItem Content="Casado" x:Name="Casado" Selected="Casado_Selected"/>
-            <ComboBoxItem Content="Separado" x:Name="Separado" Selected="Separado_Selected"/>
-            <ComboBoxItem Content="Viuvo" x:Name="Viuvo" Selected="Viuvo_Selected"/>
-            <ComboBoxItem Content="Divorciado" x:Name="Divorciado" Selected="Divorciado_Selected"/>
-        </ComboBox>
-        <TextBox x:Name="txtProfissao" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,330,0,0" Height="30" Width="150"/>
-        <wpfTool:MaskedTextBox x:Name="txtCEP" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,360,0,0" Height="30" Mask="00.000-000" FontSize="20"/>
-        <TextBox x:Name="txtEndereco" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,390,0,0" Height="30" Width="400" />
-        <TextBox x:Name="txtBairro" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,420,0,0" Height="30" Width="200"/>
-        <TextBox x:Name="txtMunicipio" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,450,0,0" Height="30" Width="200" />
-        <wpfTool:MaskedTextBox x:Name="txtMunicipio_UF" Margin="270,450,0,0" Mask="AA"/>
-        <TextBox x:Name="txtComplemento" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,480,0,0" Height="30" Width="200"/>
-        <wpfTool:MaskedTextBox x:Name="txtTelefone" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,510,0,0" Height="30" Mask="(00)0000-0000" FontSize="20"/>
-        <Button x:Name="btnCadastrar" Content="Cadastrar" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Grid.Column="1" Click="CadastrarBoletim_Click" FontSize="17" Height="30"/>
-    </Grid>
+    <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="219*"/>
+                <ColumnDefinition Width="524*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="TextBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Height" Value="30"/>
+                    <Setter Property="Width" Value="300"/>
+                </Style>
+                <Style TargetType="ComboBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Height" Value="30"/>
+                    <Setter Property="Width" Value="300"/>
+                </Style>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                    <Setter Property="Grid.Column" Value="0"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+                <Style TargetType="wpfTool:MaskedTextBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </Grid.Resources>
+            <Label Content="Nome Completo"/>
+            <Label x:Name="lblRG" Content="RG" Margin="0,30,0,0"/>
+            <Label x:Name="lblUF_RG" Content="UF" Grid.Column="1" Margin="0,30,153,0" />
+            <Label x:Name="lblPai" Content="Nome do Pai" Margin="0,60,0,0" />
+            <Label x:Name="lblMae" Content="Nome da Mãe" Margin="0,90,0,0" />
+            <Label x:Name="lblNacionalidade" Content="Nacionalidade" Margin="0,120,0,0"/>
+            <Label x:Name="lblEmail" Content="E-Mail" Margin="0,150,0,0" />
+            <Label x:Name="lblNaturalidade" Content="Naturalidade" Margin="0,180,0,0" />
+            <Label x:Name="lblSexo" Content="Sexo" Margin="0,210,0,0" />
+            <Label x:Name="lblDataNascimento" Content="Data de Nascimento" Margin="0,240,0,0" />
+            <Label x:Name="lblCutis" Content="Cútis" Margin="0,270,0,0" />
+            <Label x:Name="lblEstadoCivil" Content="Estado Civil" Margin="0,300,0,0" />
+            <Label x:Name="lblProfissao" Content="Profissão" Margin="0,330,0,0" />
+            <Label x:Name="lblCEP" Content="CEP" Margin="0,360,0,0" />
+            <Label x:Name="lblEndereco" Content="Endereço" Margin="0,390,0,0" />
+            <Label x:Name="lblBairro" Content="Bairro" Margin="0,420,0,0" />
+            <Label x:Name="lblMunicipio" Content="Municipio" Margin="0,450,0,0" />
+            <Label x:Name="lblUF_Municipio" Content="UF" Grid.Column="1" Margin="0,450,153,0"/>
+            <Label x:Name="lblComplemento" Content="Complemento" Margin="0,480,0,0" />
+            <Label x:Name="lblTelefone" Content="Telefone" Margin="0,510,0,0" />
+            <TextBox x:Name="txtNomeCompleto" Margin="0"/>
+            <wpfTool:MaskedTextBox x:Name="txtRG" Mask="00.000.000-0" Margin="0,30,0,0"/>
+            <wpfTool:MaskedTextBox x:Name="txtRG_UF" Mask="AA" Margin="270,30,0,0" />
+            <TextBox x:Name="txtNomePai" Margin="0,60,0,0" />
+            <TextBox x:Name="txtNomeMae" Margin="0,90,0,0" />
+            <TextBox x:Name="txtNacionalidade"  Margin="0,120,0,0" />
+            <TextBox x:Name="txtEmail" Margin="0,150,0,0" />
+            <TextBox x:Name="txtNaturalidade" Margin="0,180,0,0" />
+            <ComboBox x:Name="cmbSexo" Margin="0,210,0,0" >
+                <ComboBoxItem Content="Masculino" x:Name="Masculino" Selected="Masculino_Selected"/>
+                <ComboBoxItem Content="Feminino" x:Name="Feminino" Selected="Feminino_Selected"/>
+            </ComboBox>
+            <wpfTool:MaskedTextBox x:Name="txtDataNascimento" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,240,0,0" Height="30" Mask="00/00/0000" FontSize="20"/>
+            <ComboBox x:Name="txtCutis" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,270,0,0" Height="30" Width="200">
+                <ComboBoxItem Content="Branco" x:Name="Branco" Selected="Branco_Selected"/>
+                <ComboBoxItem Content="Negro" x:Name="Negro" Selected="Negro_Selected" />
+                <ComboBoxItem Content="Pardo" x:Name="Pardo" Selected="Pardo_Selected" />
+            </ComboBox>
+            <ComboBox x:Name="cmbEstadoCivil" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,300,0,0" Width="200" Height="30">
+                <ComboBoxItem Content="Solteiro" x:Name="Solteiro" Selected="Solteiro_Selected"/>
+                <ComboBoxItem Content="Casado" x:Name="Casado" Selected="Casado_Selected"/>
+                <ComboBoxItem Content="Separado" x:Name="Separado" Selected="Separado_Selected"/>
+                <ComboBoxItem Content="Viuvo" x:Name="Viuvo" Selected="Viuvo_Selected"/>
+                <ComboBoxItem Content="Divorciado" x:Name="Divorciado" Selected="Divorciado_Selected"/>
+            </ComboBox>
+            <TextBox x:Name="txtProfissao" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,330,0,0" Height="30" Width="150"/>
+            <wpfTool:MaskedTextBox x:Name="txtCEP" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,360,0,0" Height="30" Mask="00.000-000" FontSize="20"/>
+            <TextBox x:Name="txtEndereco" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,390,0,0" Height="30" Width="400" />
+            <TextBox x:Name="txtBairro" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,420,0,0" Height="30" Width="200"/>
+            <TextBox x:Name="txtMunicipio" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,450,0,0" Height="30" Width="200" />
+            <wpfTool:MaskedTextBox x:Name="txtMunicipio_UF" Margin="270,450,0,0" Mask="AA"/>
+            <TextBox x:Name="txtComplemento" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,480,0,0" Height="30" Width="200"/>
+            <wpfTool:MaskedTextBox x:Name="txtTelefone" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,510,0,0" Height="30" Mask="(00)0000-0000" FontSize="20"/>
+            <Button x:Name="btnCadastrar" Content="Proximo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Grid.Column="1" Click="CadastrarBoletim_Click" FontSize="17" Height="30" Margin="0,589,0,0"/>
+        </Grid>
+    </ScrollViewer>
 </Window>

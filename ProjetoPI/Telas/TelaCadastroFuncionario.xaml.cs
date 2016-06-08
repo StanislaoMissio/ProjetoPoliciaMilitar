@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjetoPI.Classes;
 
 namespace ProjetoPI.Telas
 {
@@ -20,12 +21,11 @@ namespace ProjetoPI.Telas
     public partial class TelaCadastroFuncionario : Window
     {
         private string permissao = null;
-        public static string funcionario = null;
 
         public TelaCadastroFuncionario()
         {
             InitializeComponent();
-            txtRE.Focus();
+            txtNome.Focus();
         }
 
         private void Administrador_Selected(object sender, RoutedEventArgs e)
@@ -45,8 +45,12 @@ namespace ProjetoPI.Telas
 
         private void btnCadastrar_Click(object sender, RoutedEventArgs e)
         {
-            Cadastrar.CadastrarFuncionario(txtRE.Text, txtNome.Text, pswSenha.Password, permissao);
-            funcionario = txtRE.Text;
+            FuncionarioBean bean = new FuncionarioBean();
+            bean.Nome = txtNome.Text;
+            bean.Re = txtRE.Text;
+            bean.Senha = Encriptografar.Encripto(pswSenha.Password);
+            bean.Permissao = permissao;
+            FuncionarioDAO.CadastrarFuncionario(bean);
             this.Close();
             TelaInicial telaInicial = new TelaInicial();
             telaInicial.Show();

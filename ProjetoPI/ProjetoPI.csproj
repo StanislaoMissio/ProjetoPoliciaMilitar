@@ -106,7 +106,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes\Cadastrar.cs" />
+    <Compile Include="Classes\BoletimBean.cs" />
+    <Compile Include="Classes\BoletimDAO.cs" />
     <Compile Include="Classes\Conexao.cs" />
     <Page Include="Telas\TelaBoletim.xaml">
       <SubType>Designer</SubType>
@@ -137,7 +138,13 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\Encriptografar.cs" />
+    <Compile Include="Classes\FuncionarioBean.cs" />
+    <Compile Include="Classes\FuncionarioDAO.cs" />
     <Compile Include="Classes\Login.cs" />
+    <Compile Include="Classes\PessoaBean.cs" />
+    <Compile Include="Classes\PessoaDAO.cs" />
+    <Compile Include="Classes\VeiculoBean.cs" />
+    <Compile Include="Classes\VeiculoDAO.cs" />
     <Compile Include="Telas\TelaBoletim.xaml.cs">
       <DependentUpon>TelaBoletim.xaml</DependentUpon>
     </Compile>

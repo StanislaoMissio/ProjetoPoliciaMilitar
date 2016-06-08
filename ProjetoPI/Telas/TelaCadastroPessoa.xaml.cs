@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjetoPI.Classes;
 
 namespace ProjetoPI.Telas
 {
@@ -76,30 +77,32 @@ namespace ProjetoPI.Telas
 
         private void CadastrarBoletim_Click(object sender, RoutedEventArgs e)
         {
+            PessoaBean bean = new PessoaBean();
+            bean.Nome = txtNomeCompleto.Text;
+            bean.NomePai = txtNomePai.Text;
+            bean.NomeMae = txtNomeMae.Text;
+            bean.Rg = txtRG.Text;
+            bean.Email = txtEmail.Text;
+            bean.Nacionalidade = txtNacionalidade.Text;
+            bean.Naturalidade = txtNaturalidade.Text;
+            bean.Sexo = sexo;
+            bean.DataNascimento = DateTime.Parse(txtDataNascimento.Text);
+            bean.Cutis = cutis;
+            bean.EstadoCivil = estadoCivil;
+            bean.Profissao = txtProfissao.Text;
+            bean.Endereco = txtEndereco.Text;
+            bean.Bairro = txtBairro.Text;
+            bean.Municipio = txtMunicipio.Text;
+            bean.Complemento = txtComplemento.Text;
+            bean.Cep = txtCEP.Text;
+            bean.Telefone = txtTelefone.Text;
+            bean.UfMunicipio = txtMunicipio_UF.Text;
+            bean.UfRG = txtRG_UF.Text;
+            PessoaDAO.CadastrarPessoa(bean);
 
-            List<string> dados = new List<string>();
-            dados.Add(txtRG.Text);
-            dados.Add(txtNomeCompleto.Text);
-            dados.Add(txtNomePai.Text);
-            dados.Add(txtNomeMae.Text);
-            dados.Add(txtNacionalidade.Text);
-            dados.Add(txtEmail.Text);
-            dados.Add(txtNaturalidade.Text);
-            dados.Add(sexo);
-            dados.Add(txtCutis.Text);
-            dados.Add(estadoCivil);
-            dados.Add(txtProfissao.Text);
-            dados.Add(txtEndereco.Text);
-            dados.Add(txtBairro.Text);
-            dados.Add(txtMunicipio.Text);
-            dados.Add(txtComplemento.Text);
-            dados.Add(txtCEP.Text);
-            dados.Add(txtTelefone.Text);
-            dados.Add(txtRG_UF.Text);
-            dados.Add(txtMunicipio_UF.Text);
-            Cadastrar.CadastrarPessoa(dados, txtDataNascimento.Text);
-            pessoa = txtRG.Text;
+            this.Close();
+            TelaBoletim telaBoletim = new TelaBoletim();
+            telaBoletim.Show();
         }
-
     }
 }

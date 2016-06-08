@@ -34,7 +34,6 @@
                 <Setter Property="HorizontalAlignment" Value="Left"/>
                 <Setter Property="Grid.Column" Value="1"/>
                 <Setter Property="Height" Value="30"/>
-                <Setter Property="Width" Value="300"/>
             </Style>
             <Style TargetType="RadioButton">
                 <Setter Property="FontSize" Value="17"/>
@@ -59,20 +58,20 @@
         <Label Content="Tipo da pista" Margin="0,480,0,0"/>
         <Label Content="Semaforo" Margin="0,510,0,0"/>
         <Label Content="Danos" Margin="0,540,0,0"/>
-        <TextBox x:Name="txtBoletim" Margin="0,0,0,0" IsEnabled="False"/>
-        <wpfTool:MaskedTextBox x:Name="txtCodigoRenavam" Margin="0,30,0,0" Mask=""/>
-        <wpfTool:MaskedTextBox x:Name="txtPlaca" Margin="0,60,0,0" Mask=""/>
+        <Label x:Name="lblBoletim" Margin="0,0,0,0" Grid.Column="1" HorizontalAlignment="Left"/>
+        <wpfTool:MaskedTextBox x:Name="txtCodigoRenavam" Margin="0,30,0,0" Mask="A"/>
+        <wpfTool:MaskedTextBox x:Name="txtPlaca" Margin="0,60,0,0" Mask="AAA-0000"/>
         <TextBox x:Name="txtMunicipio" Margin="0,90,0,0"/>
         <wpfTool:MaskedTextBox x:Name="txtUF_Municipio" Width="20" Margin="363,90,0,0" Mask="AA"/>
         <TextBox x:Name="txtChassis" Margin="0,150,0,0"/>
         <TextBox x:Name="txtMarca" Margin="0,180,0,0"/>
         <TextBox x:Name="txtModelo" Margin="0,210,0,0"/>
-        <wpfTool:MaskedTextBox x:Name="txtAnoFabricacao" Margin="0,240,0,0"/>
+        <wpfTool:MaskedTextBox x:Name="txtAnoFabricacao" Margin="0,240,0,0" Mask="0000"/>
         <TextBox x:Name="txtCategoria" Margin="0,270,0,0"/>
         <TextBox x:Name="txtCor_Predominante" Margin="0,300,0,0"/>
         <TextBox x:Name="txtCategoria_CNH" Margin="0,330,0,0"/>
         <TextBox x:Name="txtNR_CNH" Margin="0,360,0,0"/>
-        <TextBox x:Name="txtVencimento_CNH" Margin="0,390,0,0"/>
+        <wpfTool:MaskedTextBox x:Name="txtVencimento_CNH" Margin="0,390,0,0" Mask="00/00/0000"/>
         <TextBox x:Name="txtTipo_Acidente" Margin="0,420,0,0"/>
         <TextBox x:Name="txtCondicao_Pista" Margin="0,450,0,0"/>
         <TextBox x:Name="txtTipo_Pista" Margin="0,480,0,0"/>

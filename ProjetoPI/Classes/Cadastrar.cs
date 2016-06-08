@@ -10,59 +10,6 @@ namespace ProjetoPI
 {
     class Cadastrar
     {
-
-        public static void CadastrarFuncionario(string re, string nome, string senha, string permissao)
-        {
-            try
-            {
-                Conexao.Conectar();
-                string qryVerifica = "SELECT COUNT(ID_FUNC) FROM USUARIO WHERE RE = @re";
-                SqlCommand comando = new SqlCommand(qryVerifica, Conexao.conexao);
-                comando.Parameters.AddWithValue("@re", re);
-                SqlDataReader reader = comando.ExecuteReader();
-                if (reader.Read() == true)
-                {
-                    reader.Close();
-                    string qry = "INSERT INTO Usuario(Nome, RE, senha, permissao) values(@nome, @re, @senha, @permissao)";
-                    SqlCommand cmd = new SqlCommand(qry, Conexao.conexao);
-                    cmd.Parameters.AddWithValue("@nome", nome);
-                    cmd.Parameters.AddWithValue("@re", re);
-                    cmd.Parameters.AddWithValue("@senha", Encriptografar.Encripto(senha));
-                    cmd.Parameters.AddWithValue("@permissao", permissao);
-                    cmd.ExecuteNonQuery();
-                }
-                Conexao.Desconectar();
-            }
-            catch(SqlException e)
-            {
-                System.Windows.MessageBox.Show(e.Message);
-            }
-        }
-
-        public static void CadastrarPessoa(List<string> dadosPessoais, string dataNascimento)
-        {
-            try
-            {
-                Conexao.Conectar();
-                string qry = "INSERT INTO Pessoa(RG, Nome, Nome_Pai, Nome_Mae, Nacionalidade, Email, Naturalidade, Sexo, Cutis, Estado_Civil, Profissao, Endereco, Bairro, Municipio, Complemento, CEP, Telefone,data_Nascimento, UF_RG, UF_Municipio)" +
-                             "VALUES(@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, @10, @11, @12, @13, @14, @15, @16,@data, @17, @18)";
-                SqlCommand comando = new SqlCommand(qry, Conexao.conexao);
-                int i = 0;
-                DateTime data = DateTime.Parse(dataNascimento);
-                foreach (string dados in dadosPessoais){
-                    comando.Parameters.AddWithValue("@"+i, dados);
-                    i++;
-                }
-                comando.Parameters.AddWithValue("@data",data);
-                comando.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                System.Windows.MessageBox.Show(e.Message);
-            }
-
-        }
-
         public static void CadastrarVeiculo(List<string> dados, Dictionary<string,bool> impactos, string anoFabricacao, string vencimentoCNH)
         {
             try
@@ -83,11 +30,14 @@ namespace ProjetoPI
 
                 cmd.Parameters.AddWithValue("@ano_Fabricacao", anoFabricacao);
                 cmd.Parameters.AddWithValue("@Vencimento_CNH", vencimentoCNH);
+                Conexao.Desconectar();
+
             }
-            catch(SqlException e)
+            catch (SqlException e)
             {
                 System.Windows.MessageBox.Show(e.Message);
             }
         }
+
     }
 }
