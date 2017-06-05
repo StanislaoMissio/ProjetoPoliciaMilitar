@@ -10,54 +10,34 @@ namespace ProjetoPI
 {
     class Cadastrar
     {
-
-        public static void CadastrarFuncionario(string re, string senha, string permissao)
+        public static void CadastrarVeiculo(List<string> dados, Dictionary<string,bool> impactos, string anoFabricacao, string vencimentoCNH)
         {
             try
             {
                 Conexao.Conectar();
-                string qryVerifica = "SELECT COUNT(ID_FUNC) FROM USUARIO WHERE RE = '@re'";
-                SqlCommand comando = new SqlCommand(qryVerifica, Conexao.conexao);
-                comando.Parameters.Add("@re", System.Data.SqlDbType.VarChar).Value = re;
-                SqlDataReader reader = comando.ExecuteReader();
-                if (reader.Read() == true)
-                {
-                    string qry = "INSERT INTO Usuario(RE, senha, permissao) values('@re','@senha','@permissao')";
-                    SqlCommand cmd = new SqlCommand(qry, Conexao.conexao);
-                    cmd.Parameters.Add("@re", System.Data.SqlDbType.VarChar).Value = re;
-                    cmd.Parameters.Add("@senha", System.Data.SqlDbType.VarChar).Value = Encriptografar.Encripto(senha);
-                    cmd.Parameters.Add("@permissao", System.Data.SqlDbType.VarChar).Value = permissao;
-                    cmd.ExecuteNonQuery();
-                }
-                Conexao.Desconectar();
-            }
-            catch(SqlException e)
-            {
-                System.Console.Write(e.Message);
-            }
-        }
-
-        public static void CadastrarBoletim(List<string> dadosPessoais, DateTime dataNascimento)
-        {
-            try
-            {
-                Conexao.Conectar();
-                string qry = "INSERT INTO Pessoa(RG, Nome, Nome_Pai, Nome_Mae, Nacionalidade, Email, Naturalidade, Sexo, Data_Nascimento, Cutis, Estado_Civil, Profissao, Endereco, Bairro, Municipio, Complemento, CEP, Telefone)" +
-                             "VALUES(@0, @1, @2, @3, @4, @5, @6, @7, @8,@data, @9, @10, @11, @12, @13, @14, @15, @16)";
-                SqlCommand comando = new SqlCommand(qry, Conexao.conexao);
+                string qry = "INSERT INTO VEICULO(Codigo_Renavan, Placa,Municipio, UF,Chassis,Marca,Modelo,Ano_Fabricacao,Categoria,Cor_Predominante,Categoria_CNH,NR_CNH,Vencto_CNH,Tipo_Acidente,Condicao_Pista," +
+                    "Tipo_Pista,Semaforo,IMPACTO_01,IMPACTO_02,IMPACTO_03,IMPACTO_04,IMPACTO_05,IMPACTO_06,IMPACTO_07,IMPACTO_08,IMPACTO_09,IMPACTO_10,IMPACTO_11,IMPACTO_12,IMPACTO_13,Ponto_Impacto," +
+                    "Values(@1,@2,@3,@4,@5,@6,@7,@ano_Fabricacao, @8,@9,@10,@11,@12,@Vencimento_CNH,@13,@14,@15,@16,@17,@18,@19,@20,@21,@22,@23,@24,@25,@26,@27,@28,@29,@30 ";
+                SqlCommand cmd = new SqlCommand(qry, Conexao.conexao);
+                int fabricacao = Convert.ToInt32(anoFabricacao);
+                DateTime vencimento = DateTime.Parse(vencimentoCNH);
                 int i = 0;
-                foreach(string dados in dadosPessoais){
-                    comando.Parameters.Add("@"+i, System.Data.SqlDbType.VarChar).Value = dados;
+                foreach (string dadosVeiculo in dados)
+                {
+                    cmd.Parameters.AddWithValue("@" + i, dados);
                     i++;
                 }
-                comando.Parameters.Add("@data", System.Data.SqlDbType.DateTime).Value = dataNascimento;
-                comando.ExecuteNonQuery();
+
+                cmd.Parameters.AddWithValue("@ano_Fabricacao", anoFabricacao);
+                cmd.Parameters.AddWithValue("@Vencimento_CNH", vencimentoCNH);
+                Conexao.Desconectar();
+
             }
             catch (SqlException e)
             {
-                Console.WriteLine(e.Message);
+                System.Windows.MessageBox.Show(e.Message);
             }
-
         }
+
     }
 }

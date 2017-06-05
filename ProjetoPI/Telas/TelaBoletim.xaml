@@ -1,0 +1,149 @@
+﻿<Window x:Class="ProjetoPI.Telas.TelaBoletim"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns:local="clr-namespace:ProjetoPI.Telas"
+        mc:Ignorable="d"
+        Title="Cadastrar Boletim" Height="990" Width="900">
+    <ScrollViewer>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="241*"/>
+                <ColumnDefinition Width="351*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="HorizontalAlignment" Value="Right"/>
+                    <Setter Property="Grid.Column" Value="0"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+                <Style TargetType="TextBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Height" Value="30"/>
+                    <Setter Property="Width" Value="300"/>
+                </Style>
+                <Style TargetType="ComboBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+                <Style TargetType="wpfTool:MaskedTextBox">
+                    <Setter Property="FontSize" Value="17"/>
+                    <Setter Property="VerticalAlignment" Value="Top"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="Grid.Column" Value="1"/>
+                    <Setter Property="Height" Value="30"/>
+                </Style>
+            </Grid.Resources>
+            <Label Content="RE do Funcionário" Margin="0,0,0,0"/>
+            <Label Content="RG da Vitima" Margin="0,30,0,0"/>
+            <Label Content="Hora da Comunicação" Margin="0,60,0,0"/>
+            <Label Content="Hora do Fato" Margin="0,90,0,0"/>
+            <Label Content="Hora Local" Margin="0,120,0,0"/>
+            <Label Content="Hora Final" Margin="0,150,0,0"/>
+            <Label Content="Data da Emissão" Margin="0,180,0,0"/>
+            <Label Content="Solicitação da Ocorrência" Margin="0,210,0,0"/>
+            <Label Content="Condição do Envolvido" Margin="0,240,0,0"/>
+            <Label Content="Nome do Solicitante" Margin="0,270,0,0"/>
+            <Label Content="Qualificado como envolvido?" Margin="0,300,0,0"/>
+            <Label Content="Endereço fornecido" Margin="0,330,0,0"/>
+            <Label Content="Bairro fornecido" Margin="0,360,0,0"/>
+            <Label Content="Telefone fornecido" Margin="0,390,0,0"/>
+            <Label Content="Outros dados" Margin="0,420,0,0"/>
+            <Label Content="Natureza da Ocorrência" Margin="0,450,0,0"/>
+            <Label Content="Tipo da ocorrência" Margin="0,480,0,0"/>
+            <Label Content="Logradouro" Margin="0,510,0,0"/>
+            <Label Content="Municipio" Margin="0,540,0,0"/>
+            <Label Content="Bairro" Margin="0,570,0,0"/>
+            <Label Content="Ponto de Referência" Margin="0,600,0,0"/>
+            <Label Content="Outro local de referência" Margin="0,630,0,0"/>
+            <Label Content="Prefixo da Viatura" Margin="0,660,0,0"/>
+            <Label Content="Versão do envolvido" Margin="0,690,0,0"/>
+            <Label Content="Caracteristicas do local" Margin="0,720,0,0"/>
+            <Label Content="Iluminação" Margin="0,750,0,0"/>
+            <Label Content="Tempo" Margin="0,780,0,0"/>
+            <Label Content="Relátorio policial" Margin="0,810,0,0"/>
+            <Label Content="Nome do policial" Margin="0,840,0,0"/>
+            <Label Content="RE do policial" Margin="0,870,0,0"/>
+            <wpfTool:MaskedTextBox x:Name="RE_Func" Margin="0,0,0,0" Mask="000000-0"/>
+            <wpfTool:MaskedTextBox x:Name="RG_Vitima" Margin="0,30,0,0" Mask="00.000.000-0"/>
+            <wpfTool:MaskedTextBox x:Name="Hora_Comunicacao" Margin="0,60,0,0" Mask="00:00"/>
+            <wpfTool:MaskedTextBox x:Name="Hora_Fato" Margin="0,90,0,0" Mask="00:00"/>
+            <wpfTool:MaskedTextBox x:Name="Hora_Local" Margin="0,120,0,0" Mask="00:00"/>
+            <wpfTool:MaskedTextBox x:Name="Hora_Final" Margin="0,150,0,0" Mask="00:00"/>
+            <wpfTool:MaskedTextBox x:Name="Data_Emissao" Margin="0,180,0,0" Mask="00/00/0000"/>
+            <ComboBox x:Name="Solicitacao_Ocorrencia" Margin="0,210,0,0" >
+                <ComboBoxItem Content="Via COPOM" x:Name="ViaCopom" />
+                <ComboBoxItem Content="Diretamente da guarnição" x:Name="DiretamenteGuarnicao" />
+                <ComboBoxItem Content="A Guarnição deparou" x:Name="GuarnicaoDeparou" />
+            </ComboBox>
+            <ComboBox x:Name="Condicao_Envolvido" Margin="0,240,0,0">
+                <ComboBoxItem Content="V" x:Name="Vitima" />
+                <ComboBoxItem Content="A" x:Name="Autor" />
+                <ComboBoxItem Content="I" x:Name="Indicado" />
+                <ComboBoxItem Content="S" x:Name="Sindicado" />
+                <ComboBoxItem Content="T" x:Name="Testemunha" />
+                <ComboBoxItem Content="C" x:Name="Condutor" />
+                <ComboBoxItem Content="PR" x:Name="Proprietario" />
+                <ComboBoxItem Content="PA" x:Name="Passageiro" />
+                <ComboBoxItem Content="PE" x:Name="Pedestre" />
+                <ComboBoxItem Content="PND" x:Name="ParteNaoDefinida" />
+            </ComboBox>
+            <TextBox x:Name="Nome_Solicitante" Margin="0,270,0,0"/>
+            <RadioButton x:Name="Qualificado_Envolvido_Sim" Content="Sim" Grid.Column="1" HorizontalAlignment="Left" Margin="71,310,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.506,0.467"/>
+            <RadioButton x:Name="Qualificado_Envolvido_Nao" Content="Não" Grid.Column="1" HorizontalAlignment="Left" Margin="215,310,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.506,0.467"/>
+            <TextBox x:Name="Endereco_Fornecido" Margin="0,330,0,0"/>
+            <TextBox x:Name="Bairro_Fornecido" Margin="0,360,0,0"/>
+            <wpfTool:MaskedTextBox x:Name="Telefone_Fornecido" Margin="0,390,0,0" Mask="(00)0000-0000"/>
+            <TextBox x:Name="Outros_Dados" Margin="0,420,0,0" />
+            <TextBox x:Name="Natureza_Ocorrencia" Margin="0,450,0,0"/>
+            <TextBox x:Name="Tipo_Ocorrencia" Margin="0,480,0,0"/>
+            <TextBox x:Name="Logradouro" Margin="0,510,0,0"/>
+            <TextBox x:Name="Municipio" Margin="0,540,0,0"/>
+            <TextBox x:Name="Bairro" Margin="0,570,0,0"/>
+            <TextBox x:Name="Ponto_Referencia" Margin="0,600,0,0"/>
+            <TextBox x:Name="Outro_Local_Referencia" Margin="0,630,0,0"/>
+            <wpfTool:MaskedTextBox x:Name="Prefixo_Viatura" Margin="0,660,0,0" Mask="A-00000"/>
+            <TextBox x:Name="Versao_Envolvido" Margin="0,690,0,0"/>
+            <ComboBox x:Name="Caracteristicas_Local" Margin="0,720,0,0">
+                <ComboBoxItem Content="Banco" x:Name="Banco" />
+                <ComboBoxItem Content="Via Pública" x:Name="ViaPublica"/>
+                <ComboBoxItem Content="Casa" x:Name="Casa" />
+                <ComboBoxItem Content="Apartamento" x:Name="Apartamento"/>
+                <ComboBoxItem Content="Favela" x:Name="Favela" />
+                <ComboBoxItem Content="Estabelecimento Comercial" x:Name="EstabelecimentoComercial" />
+                <ComboBoxItem Content="Habitação Coletiva(cortiço)" x:Name="HabitacaoColetiva" />
+                <ComboBoxItem Content="Interno" x:Name="Interno" />
+                <ComboBoxItem Content="Externo" x:Name="Externo" />
+                <ComboBoxItem Content="Preservado" x:Name="Preservado"/>
+                <ComboBoxItem Content="Não Preservado" x:Name="NaoPreservado" />
+            </ComboBox>
+            <ComboBox x:Name="Iluminacao" Margin="0,750,0,0">
+                <ComboBoxItem Content="Luz Solar" x:Name="LuzSolar"/>
+                <ComboBoxItem Content="Entardecer ou Amanhecer" x:Name="EntardecerAmanhecer"/>
+                <ComboBoxItem Content="Noite com Luz Artificial" x:Name="NoiteComLuz" />
+                <ComboBoxItem Content="Noite sem Luz Artificial" x:Name="NoiteSemLuz" />
+            </ComboBox>
+            <ComboBox x:Name="Tempo" Margin="0,780,0,0">
+                <ComboBoxItem Content="Bom" x:Name="Bom" />
+                <ComboBoxItem Content="Neblina" x:Name="Neblina" />
+                <ComboBoxItem Content="Chuva" x:Name="Chuva" />
+            </ComboBox>
+            <TextBox x:Name="Relatorio_Policial" Margin="0,810,0,0"/>
+            <TextBox x:Name="Nome_Policial" Margin="0,840,0,0"/>
+            <wpfTool:MaskedTextBox x:Name="RE_Policial" Margin="0,870,0,0" Mask="000000-0"/>
+            <Button Grid.Column="1" Width="100" Height="30" FontSize="17" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                Cadastrar
+            </Button>
+        </Grid>
+    </ScrollViewer>
+</Window>

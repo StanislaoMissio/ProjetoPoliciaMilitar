@@ -57,17 +57,9 @@ namespace ProjetoPI
 
             if (permissao.Equals("U"))
             {
-                telaInicial.tabCadastrarUsuario.Visibility = Visibility.Hidden;
-                telaInicial.tabCadastrarUsuario.IsEnabled = false;
-                telaInicial.tabGerarRelatorio.Visibility = Visibility.Hidden;
-                telaInicial.tabGerarRelatorio.IsEnabled = false;
-                telaInicial.ShowDialog();
             }
             else if (permissao.Equals("C"))
             {
-                telaInicial.tabCadastrarUsuario.Visibility = Visibility.Hidden;
-                telaInicial.tabCadastrarUsuario.IsEnabled = false;
-                telaInicial.ShowDialog();
             }
             else
             {
